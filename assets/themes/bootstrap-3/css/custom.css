@@ -320,13 +320,21 @@ h1,h2,h3,h4,h5,h6 {
     font-size:35px;
     line-height: 47px;
     font-weight: 600;
-    font-family: 'Fjalla One', 'Abril Fatface', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Fjalla One', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .tile_stats_count .count small {
     font-size: 20px;
     line-height: 20px;
     font-weight: 600;
+}
+
+.count_top {
+   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.count_bottom a {
+   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .count_bottom i {
