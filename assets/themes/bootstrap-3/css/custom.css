@@ -32,10 +32,8 @@ body {
 .navbar-custom .navbar-nav > li > a {
     color:#fff;
 }
-.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-    color: #ffffff;
-    background-color:transparent;
-}
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus { text-decoration: none; background-color: #3279B5; }
+
 .navbar-custom .navbar-brand {
     color:#eeeeee;
 }
