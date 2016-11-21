@@ -1,0 +1,229 @@
+
+/* ------ Basic Overrides -------- */
+/*
+.navbar{
+   background:#2C3742 !important;
+   border:0px !important;
+}
+*/
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+/*body {
+  padding-top: 50px;
+}*/
+/*
+h1 {
+    font-size:28px
+}
+*/
+/*
+ * Main content
+*/
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+.page-header {
+    margin-top: 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    font-size: 30px;
+}
+
+.container {
+    width:90%
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+/*
+#wrap > .container {
+  padding: 50px 15px 0;
+}
+*/
+
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom table CSS
+-------------------------------------------------- */
+.table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.tableinfo {
+	margin: 10px 80px 0px 80px;
+}
+
+.tableinfo .table-attrib {
+    background:#F9F9F9;
+    font-weight:bold;
+    vertical-align: middle;
+}
+
+.tableinfo .table-value {
+    vertical-align: middle;
+}
+
+
+.center {
+	text-align: center; 
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-bottom: auto; 
+	margin-top: auto;
+	vertical-align: middle;
+}
+ 
+.classtab {
+	padding-top: 20px;
+}
+
+/* Tile stats count. */
+@media (max-width: 992px) {
+    .tile_stats_count {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #D9DEE4;
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+    .tile_stats_count .count {
+        font-size: 35px !important;
+    }
+}
+
+@media(max-width:768px) {
+    .tile_stats_count .count {
+        font-size: 30px !important;
+    }
+    .tile_stats_count .right span {
+        font-size: 12px;
+    }
+}
+
+.tile_count {
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.tile_count div:first-child .left {
+    border: 0;
+}
+
+.tile_count .tile_stats_count {
+    border-left: 0px solid #333;
+    padding: 0;
+}
+
+.tile_stats_count .left {
+    width: 15%;
+    float: left;
+    height: 65px;
+    border-left: 2px solid #ADB2B5;
+    margin-top: 10px;
+}
+
+.tile_stats_count .right {
+    padding-left: 10px;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.tile_stats_count .right span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tile_stats_count .count {
+    font-size:35px;
+    line-height: 47px;
+    font-weight: 600;
+}
+
+.tile_stats_count .count small {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.count_bottom i {
+    width: 12px;
+}
+
+.tiles {
+    border-top: 1px solid #ccc;
+    margin-top: 15px;
+    padding-top: 5px;
+    margin-bottom: 0;
+}
+
+/* top tiles */
+
+.tile {
+    overflow: hidden;
+}
+
+.top_tiles {
+    margin-bottom: 0;
+}
+
+.top_tiles .tile span {}
+
+.top_tiles .tile h2 {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 3px 0 7px;
+    font-weight: bold;
+}
+
+/* Custom modal CSS
+-------------------------------------------------- */
+.modal-footer > a {
+  margin: 0 1em;
+}
