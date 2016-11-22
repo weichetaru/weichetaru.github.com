@@ -2,7 +2,7 @@
 layout: post
 title: "My first post"
 description: ""
-category: "machine-learning"
+category: "data-wrangling-with-python"
 tags: []
 ---
 {% include JB/setup %}

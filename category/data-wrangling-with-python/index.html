@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "Machine Learning"
-description: "List up posts related to Machine Learning"
+title: "Data Wrangling with Python"
+description: "List up posts related to Data Wrangling using Python"
 ---
 {% include JB/setup %}
 
 <ul>
-  {% for post in site.categories.machine-learning %}
+  {% for post in site.categories.data-wrangling-with-python %}
     {% unless post.next %}
       <h3>{{ post.date | date: '%Y %b' }}</h3>
     {% else %}
@@ -21,3 +21,4 @@ description: "List up posts related to Machine Learning"
     {% endif %}
   {% endfor %}
 </ul>
+
