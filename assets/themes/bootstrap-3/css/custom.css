@@ -19,6 +19,26 @@ h1,h2,h3,h4,h5,h6 {
     width:90%
 }
 
+/* Hide anchor links unless you hover over the title */
+.anchor-link {
+    display: none;
+}
+*:hover > .anchor-link {
+    display: inline;
+}
+
+/* Make code blocks scrollable */
+div.highlight > pre {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+div.output_text > pre {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+
 /*
  * Main content
 */

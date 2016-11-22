@@ -1,0 +1,16 @@
+---
+layout: page
+title: "Data Science with Python"
+description: "List up posts related to Data Science using Python"
+---
+{% include JB/setup %}
+
+<h2>Posts in category Data Science with Python:</h2>
+
+<ul>
+  {% for post in site.categories.data-science-with-python %}
+    {% if post.url %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
