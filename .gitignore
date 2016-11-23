@@ -4,6 +4,8 @@ _theme_packages/*
 Thumbs.db
 .DS_Store
 
+notebook/machine-learning/.ipynb_checkpoints/*
+
 !.gitkeep
 
 .rbenv-version
