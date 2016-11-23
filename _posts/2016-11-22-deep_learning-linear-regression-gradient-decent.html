@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: Deep Learning Note - linear regression
+title: Deep Learning - Use gradient decent with linear regression 
 category: machine-learning 
 tag: [python, deep-learning] 
 ---
@@ -23,7 +23,7 @@ tag: [python, deep-learning]
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this note, I am going to train a linear regression model with <code>gradient decent</code> estimation.
 It might look pretty easy but it's very helpful to increase the understanding of the basics of Deep Learning.</p>
-<p>The sample code in this note come from <a href="http://peterroelants.github.io/">peterroelants.github.io</a> where providing more details on neural netwrok and deep learning. It's very informative and highly recommanded. Below is more like my personal notes.</p>
+<p>The sample codes in this note come from <a href="http://peterroelants.github.io/">peterroelants.github.io</a> where providing more details on neural netwrok and deep learning. It's very informative and highly recommanded. Here is more like my personal memo.</p>
 
 </div>
 </div>
@@ -33,7 +33,7 @@ It might look pretty easy but it's very helpful to increase the understanding of
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Overview">Overview<a class="anchor-link" href="#Overview">&#182;</a></h1><p>Below will be covered:</p>
+<h1 id="Overview">Overview<a class="anchor-link" href="#Overview">&#182;</a></h1><p>This note will covere:</p>
 <ul>
 <li>Prepare the data</li>
 <li>Loss function, chian rule and its derivative</li>
@@ -467,7 +467,7 @@ $$\frac{\partial \xi }{\partial w} = \frac{\partial y}{\partial w} \frac{\partia
 $$\frac{\partial \xi_{i} }{\partial y_{i}}  = \frac{\partial (t_{i}-y_{i})^{2}}{\partial y_{i}}=2(y_{i}-t_{i})$$</p>
 <p>and because $y=x*w$:
 $$\frac{\partial y_{i}}{\partial w_{i}}=x_{i}$$</p>
-<p>The result is simple:
+<p>so combine everything we will get:
 $$\Delta w = \mu * 2 * \sum_{i=1}^{N}x_{i}(y_{i}-t_{i})$$</p>
 
 </div>
