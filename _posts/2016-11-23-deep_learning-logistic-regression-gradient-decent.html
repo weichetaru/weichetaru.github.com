@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: Deep Learning - Use gradient decent with logistic regression 
+title: Deep Learning - Logistic regression with gradient decent
 category: machine-learning 
 tag: [python, deep-learning] 
 ---
@@ -12,7 +12,7 @@ tag: [python, deep-learning]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Deep-Learning---Logistic-Regression-with-Gradient-Decent">Deep Learning - Logistic Regression with Gradient Decent<a class="anchor-link" href="#Deep-Learning---Logistic-Regression-with-Gradient-Decent">&#182;</a></h1>
+<h1 id="Deep-Learning---Logistic-Regression-with-Gradient-Decent">Logistic Regression<a class="anchor-link" href="#Deep-Learning---Logistic-Regression-with-Gradient-Decent">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -568,7 +568,7 @@ $$\begin{split}
 P(t|z) & = \prod_{i=1}^{n} P(t_i=1|z_i)^{t_i} * (1 - P(t_i=1|z_i))^{1-t_i} \\
 & = \prod_{i=1}^{n} y_i^{t_i} * (1 - y_i)^{1-t_i} 
 \end{split}$$
-The cross contropy cost function can be defined as (by taking negative $log$):</p>
+The cross entropy cost function can be defined as (by taking negative $log$):</p>
 $$\begin{split}
 \xi(t,y) & = - log \mathcal{L}(\theta|t,z) \\
 & = - \sum_{i=1}^{n} \left[ t_i log(y_i) + (1-t_i)log(1-y_i) \right] \\
@@ -606,6 +606,16 @@ $$\Delta w_j = \mu * \sum_{i=1}^{N} x_{ij} (y_i - t_i)$$</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First of all, define the logistic function <code>logistic</code> and the model <code>nn</code>. The <code>cost</code> function is the sum of the cross entropy of all training samples.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
@@ -634,6 +644,16 @@ $$\Delta w_j = \mu * \sum_{i=1}^{N} x_{ij} (y_i - t_i)$$</p>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Plot the cost function and as you can see it's convex and has global optimal minimum.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1132,6 +1152,16 @@ RCRyCiAiIiISOQUQERERiZwCiIiIiETu/wGegnWONuLtMQAAAABJRU5ErkJggg==
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>grandinet</code> and <code>delta_w</code> is just simple equations we produced above.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
@@ -1151,6 +1181,16 @@ RCRyCiAiIiISOQUQERERiZwCiIiIiETu/wGegnWONuLtMQAAAABJRU5ErkJggg==
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Start trining and just interating for 10 steps. <code>w = w-dw</code> is key point we update w during each integration.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1175,6 +1215,16 @@ RCRyCiAiIiISOQUQERERiZwCiIiIiETu/wGegnWONuLtMQAAAABJRU5ErkJggg==
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Plot just 4 itegrations and you can see it toward to global minimum.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
