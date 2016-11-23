@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "My first post"
+title: My second post
 description: ""
-category: "data-wrangling-with-python"
+category: data-wrangling
 tags: []
 ---
 {% include JB/setup %}
