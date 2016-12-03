@@ -310,16 +310,16 @@ AZwUL+Upq5DNAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Model can be visualized as below: 
-<img src="img/SimpleANN03.png"></p>
-<p>Specifically, for hidden layer <strong>h</strong>:</p>
+<p>Model can be visualized as below:</p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/weichetaru/weichetaru.github.com/master/notebook/machine-learning/img/SimpleANN03.png"></p><p>Specifically, for hidden layer <strong>h</strong>:</p>
 $$\mathbf{h} = \phi(\mathbf{x}*w_h) = e^{-(\mathbf{x}*w_h)^2}$$<p>where</p>
 $$\text{RBF} = \phi(z) = e^{-z^2}$$<p>For <strong>y</strong>:
 $$\mathbf{y} = \sigma(\mathbf{h} * w_o - 1) = \frac{1}{1+e^{-\mathbf{h} * w_o - 1}}$$</p>
-<p>Note the -1 to present bias(intercept) term. Usually it should also trained by model but to keep model simple here we simply use contant -1. &lt;/p&gt;</p>
-<p>We still use <code>cross-entropy cost function</code>.&lt;/p&gt;
+<p>Note the -1 to present bias(intercept) term. Usually it should also trained by model but to keep model simple here we simply use contant -1.</p>
+<p>We still use <code>cross-entropy cost function</code>.<br>
 As we specified before in <a href="https://weichetaru.github.io/machine-learning/2016/11/23/deep_learning-logistic-regression-gradient-decent#Loss-function,-chain-rule-and-its-derivative">Logistic Regression</a> For Binary variable. It should be:</p>
-$$\xi(t_i,y_i) = - \left[ t_i log(y_i) + (1-t_i)log(1-y_i) \right]$$<p>The model and functions specified above is what we usually call <code>forward step</code> in neural network. It will produce error/cost/gradient which we will use to adjust parameters during <code>backward propagation</code>. &lt;/p&gt;</p>
+$$\xi(t_i,y_i) = - \left[ t_i log(y_i) + (1-t_i)log(1-y_i) \right]$$<p>The model and functions specified above is what we usually call <code>forward step</code> in neural network. It will produce error/cost/gradient which we will use to adjust parameters during <code>backward propagation</code>.</p>
 <p>We can at first specify the forward step into code and plot the cost function.</p>
 
 </div>
@@ -2042,9 +2042,9 @@ Eo0OAQAAAABJRU5ErkJggg==
 <p>Both $w_h$ and $w_o$ are updated:</p>
 $$w(k+1) = w(k) - \Delta w(k+1)$$$$\Delta w = \mu * {\partial \xi}/{\partial w}$$<p>We start from output layer (Note the result is what we produced in <a href="https://weichetaru.github.io/machine-learning/2016/11/23/deep_learning-logistic-regression-gradient-decent#Loss-function,-chain-rule-and-its-derivative">Logistic Regression</a>. Here simply replace $x_i$ with $h_i$):</p>
 $$\frac{\partial \xi_i}{\partial w_o} = \frac{\partial z_{oi}}{\partial w_o} \frac{\partial y_i}{\partial z_{oi}} \frac{\partial \xi_i}{\partial y_i} = h_i (y_i-t_i) = h_i * \delta_{oi}$$<p>Note here $z_{oi} = h_i * w_o$ and ${\partial \xi_i}/{\partial z_{oi}} = \delta_{oi}$</p>
-<p>For Hidden layer, still use chain rule:</p>
-$$\frac{\partial \xi_i}{\partial w_{h}} = \frac{\partial z_{hi}}{\partial w_{h}} \frac{\partial h_i}{\partial z_{hi}} \frac{\partial \xi_i}{\partial h_i}$$<p>Note here $z_{hi} = x_i * w_{h}$ and ${\partial \xi_i}/{\partial z_{hi}} = \delta_{hi}$. &lt;/p&gt;</p>
-<p>How to define $\delta_{hi}$? Simple, still use chain rule:</p>
+<p>For Hidden layer, still use <code>chain rule</code>:</p>
+$$\frac{\partial \xi_i}{\partial w_{h}} = \frac{\partial z_{hi}}{\partial w_{h}} \frac{\partial h_i}{\partial z_{hi}} \frac{\partial \xi_i}{\partial h_i}$$<p>Note here $z_{hi} = x_i * w_{h}$ and ${\partial \xi_i}/{\partial z_{hi}} = \delta_{hi}$.</p>
+<p>How to define $\delta_{hi}$? Simple, still use <code>chain rule</code>:</p>
 $$\delta_{hi} = \frac{\partial \xi_i}{\partial z_{hi}} = \frac{\partial h_i}{\partial z_{hi}} \frac{\partial z_{oi}}{\partial h_i} \frac{\partial \xi_i}{\partial z_{oi}} 
 = (-2 * z_{hi} * h_i) * w_{o} * (y_i - t_i) = -2 * z_{hi} * h_i * w_{o} * \delta_{oi}$$<p>Note for $\frac{\partial h_i}{\partial z_{hi}}$:</p>
 $$\frac{\partial h_i}{\partial z_{hi}} = \frac{d \phi(z)}{dz} = -2 z e^{-z^2} = -2 z \phi(z)$$<p></p>
