@@ -5,7 +5,7 @@ Thumbs.db
 .DS_Store
 
 notebook/machine-learning/.ipynb_checkpoints/*
-
+notebook/data/*
 !.gitkeep
 
 .rbenv-version
